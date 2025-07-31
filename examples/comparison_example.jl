@@ -11,16 +11,16 @@ dτ = 5e-2
 
 # Define algorithms
 invtol = 1e-6
-trunctol = 1e-8
+trunctol = 1e-6
 D_max = 20
 alg_inversion = VOMPS_Inversion(1; tol = 1e-8, maxiter = 250, verbosity = 2)
 alg_trunc_Z = StandardTruncation(trunc_method = truncerr(trunctol))
-# alg_trunc_disordermpo = DisorderTracedTruncation(trunc_method = truncdim(D_max))
-alg_trunc_disordermpo = DisorderOpenTruncation(trunc_method = truncdim(D_max))
+alg_trunc_disordermpo = DisorderTracedTruncation(trunc_method = truncdim(D_max))
+# alg_trunc_disordermpo = DisorderOpenTruncation(trunc_method = truncdim(D_max))
 # alg_trunc_disordermpo = SVDUpdateTruncation(D_max, tol = trunctol, maxit = 10, verbosity = 2)
 
 
-βs = 1:0.5:20
+βs = 1:0.5:3
 # Evolve density matrix
 function get_ξ(βs, Us, ps)
     ξs = zeros(length(βs))
@@ -89,16 +89,18 @@ for (iN, N) in enumerate(Ns)
         ps = [1.]
     else
         hs = Vector(a:(b-a)/(N-1):b)
+        Js = [0.99, 1.01]
+        # ps = ones(N)./N
         ps = ones(N^2)./N^2
 
-        Us = RTFIM_time_evolution_Trotter(dτ, hs, hs)
+        Us = RTFIM_time_evolution_Trotter(dτ, hs, Js)
         Us = DisorderMPO([Us[1]])
     end
 
     ξs, ϵs, DZs = get_ξ(βs, Us, ps)
 
     # Make fits
-    minfit = length(ξs)-10
+    minfit = 10
     maxfit = length(ξs)
     linmodel(t, p) = p[1] .+ p[2]*t
     p0 = [1., 1.]
@@ -138,3 +140,4 @@ end
 # axislegend(ax2, position=:lt)
 fig[1, 3] = Legend(fig, ax2, framevisible = false)
 fig
+# save("new.png",fig)
