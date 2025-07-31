@@ -41,7 +41,7 @@ end
 # Multiply two DisorderMPOs, used in time evolution
 function Base.:*(T1::DisorderMPO, T2::DisorderMPO)
 
-    (length(T1) == length(T2)) || throw(ArgumentError("T1 T2 should have the same length"))
+    (length(T1) == length(T2)) || throw(ArgumentError("T₁ T₂ should have the same length"))
 
     Tprods = map(1:length(T1)) do ix
         spL1, spR1 = space(T1[ix], 1), space(T1[ix], 6)'
@@ -161,7 +161,7 @@ end
 
 # measure the disorder average of a disorder operator on site i
 function measure(ρ::DisorderMPO, ps::Vector{<:Real}, Os::DisorderMPO, i::Int)
-    ρO_weighted = disorder_average(Os * ρ, ps)
+    ρO_weighted = disorder_average(ρ, ps)
     TMs = map(ρO_weighted) do ρx
         @tensor TM[-1; -2] := ρx[-1 1; 1 -2]
         return TM
@@ -176,18 +176,47 @@ function measure(ρ::DisorderMPO, ps::Vector{<:Real}, Os::DisorderMPO, i::Int)
     vr = Tensor(rand, ComplexF64, space(ρO_weighted[i], 4)')
     vl = permute(vl, ((), (1,)))
 
-    _, vls = eigsolve(x->x*TMl, vl, 1, :LM)
+    vals, vls = eigsolve(x->x*TMl, vl, 3, :LM)
     _, vrs = eigsolve(x->TMr*x, vr, 1, :LM)
     vl = vls[1]
     vr = vrs[1]
+    λ0 = vals[1]
+    N0 = vl*vr
 
-   
-    
-    iso = isomorphism(space(vl)[1]', space(ρ[i], 1) ⊗ space(Os[1], 1))
-    @tensor O_res = vl[1] * ρO_weighted[i][1 3; 3 2] * vr[2]
-    @tensor N = vl[1] * iso[1; 2 3] * ρ[i][2 4 7; 4 7 5] * conj(iso[6;5 3]) * vr[6]
-    @show O_res, N
-    return O_res/(vl*vr)[1]
+    ρ_weighted = disorder_average(ρ*Os, ps)
+    TMs2 = map(ρ_weighted) do ρx
+        @tensor TM[-1; -2] := ρx[-1 1; 1 -2]
+        return TM
+    end
+
+    TMs2 = PeriodicArray(TMs2)
+
+    M = length(ρ_weighted)
+    TMl2 = prod(map(ix->TMs2[ix], i-M:i-1))
+    TMr2 = prod(map(ix->TMs2[ix], i+1:i+M))
+
+    vl2 = Tensor(rand, ComplexF64, space(ρ_weighted[i], 1)')
+    vr2 = Tensor(rand, ComplexF64, space(ρ_weighted[i], 4)')
+    vl2 = permute(vl2, ((), (1,)))
+
+    vals2, vls2 = eigsolve(x->x*TMl2, vl2, 3, :LM)
+    valsr2, vrs2 = eigsolve(x->TMr2*x, vr2, 3, :LM)
+    vl2 = vls2[1]
+    vr2 = vrs2[1]
+    λ = vals2[1]
+    N = vl2*vr2
+    N2 = vl2*vrs2[2]
+    # @tensor O_res = vl[1] * ρO_weighted[i][1 3; 3 2] * vr[2]
+
+    Ns = [(vls2[i]*vrs2[j])[1] for i in 1:2, j in 1:2]
+    @show λ, λ0, N0[1], N[1], N2[1]
+    # @show Ns
+    @show norm(vl2), norm(vr2)
+    # @show vals
+    # @show vals2
+    # @show TMs2
+    # @show TMs
+    return 1/N0[1]*λ/λ0
 end
 
 # Fix phase of the disorder MPO after multiplying with inverse partition function
@@ -233,8 +262,8 @@ function normalize_each_disorder_sector(ρ::DisorderMPO, trunc_alg::AbstractTrun
 
     # Check accuracy of inversion
     (verbosity > 0) && (@info(crayon"yellow"("Accuracy check")))
-    # ϵ_acc = test_identity(mpoZ*mpoZinv)
-    ϵ_acc = test_identity_random(mpoZ*mpoZinv)
+    ϵ_acc = test_identity(mpoZ*mpoZinv)
+    # ϵ_acc = test_identity_random(mpoZ*mpoZinv)
     ϵ_acc > invtol || ((verbosity > 0) && (@info(crayon"green"("accuracy for MPO inversion: ϵ_acc = $ϵ_acc"))))
     ϵ_acc < invtol || @warn(crayon"red"("Inverse not accurate: ϵ_acc = $ϵ_acc"))  
 
@@ -267,10 +296,12 @@ function average_correlation_length(ρs::DisorderMPO, ps::Vector{<:Real})
 
     vr = Tensor(rand, ComplexF64, space(A, 2)')
 
-    λs, vrs = eigsolve(x->A*x, vr, 2, :LM)
+    λs, vrs = eigsolve(x->A*x, vr, 3, :LM)
     λ1 = λs[1]
     λ2 = λs[2]
+
     
     ξ = real(unit_cell/log(λ1/λ2))
+
     return ξ
 end
