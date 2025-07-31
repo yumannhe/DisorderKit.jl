@@ -96,7 +96,7 @@ function truncate_mpo(ρ::DisorderMPO, ps::Vector{<:Real}, alg::SVDUpdateTruncat
         X = TensorMap(rand,ComplexF64, ℂ^alg.D_max, space(ρ[1])[1])
         U, _, V = tsvd(X)
         X = U*V
-        X_new = optimize_isometry(ρ, X; tol = alg.tol, maxit = alg.maxit)
+        X_new = optimize_isometry(ρ, X, ps; tol = alg.tol, maxit = alg.maxit)
         @tensor ρs_updated[-1 -2 -3; -4 -5 -6] := ρ[1][1 -2 -3; -4 -5 2] * X_new[-1; 1] * conj(X_new[-6; 2])
         return DisorderMPO([ρs_updated])
     end

@@ -28,31 +28,32 @@ function insert_isometry(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}) wher
     return ρ2
 end
 
-function mpo_transf(ρ1::AbstractDisorderMPOTensor, ρ2::AbstractDisorderMPOTensor, v::AbstractTensorMap{T,S, 1, 1}) where {T, S}
-    @tensor Tv[-1; -2] := ρ1[1 3 5; 4 6 -2] * conj(ρ2[2 3 5; 4 6 -1]) * v[2; 1]
+function mpo_transf(ρ1::AbstractDisorderMPOTensor, ρ2::AbstractDisorderMPOTensor, v::AbstractTensorMap{T,S, 1, 1}, P::AbstractTensorMap{Q, R, 1, 1}) where {T, S, R, Q}
+    @tensor Tv[-1; -2] := P[7; 5] * ρ1[1 3 5; 4 6 -2] * conj(ρ2[2 3 7; 4 6 -1]) * v[2; 1]
     return Tv
 end
 
-
-function mpo_ovlp(ρ1::AbstractDisorderMPOTensor, ρ2::AbstractDisorderMPOTensor)
+function mpo_ovlp(ρ1::AbstractDisorderMPOTensor, ρ2::AbstractDisorderMPOTensor, ps::Vector{<:Real})
     V1 = space(ρ1, 1)
     V2 = space(ρ2, 1)
+    D = space(ρ1, 3)
+    P = TensorMap(diagm(ps), D, D)
 
     v0 = TensorMap(rand, ComplexF64, V2, V1)
-    λs, _ = eigsolve(x -> mpo_transf(ρ1,ρ2,x), v0, 1, :LM)
+    λs, _ = eigsolve(x -> mpo_transf(ρ1,ρ2,x,P), v0, 1, :LM)
     return λs[1]
 end
 
-function mpo_fidelity(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}) where {T, S}
+function mpo_fidelity(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}, ps::Vector{<:Real}) where {T, S}
     ρ1 = ρ[1]
     ρ2 = insert_isometry(ρ, X)
-    return norm(mpo_ovlp(ρ1, ρ2) * mpo_ovlp(ρ2, ρ1) / mpo_ovlp(ρ2, ρ2))
+    return norm(mpo_ovlp(ρ1, ρ2, ps) * mpo_ovlp(ρ2, ρ1, ps) / mpo_ovlp(ρ2, ρ2, ps))
 end
 
-function target_fid(ρs::DisorderMPO)
+function target_fid(ρs::DisorderMPO, ps::Vector{<:Real})
     function fg(X::AbstractTensorMap{T, S, 1, 1}) where {T, S}
-        target_val = mpo_fidelity(ρs, X)
-        grad = gradient(x -> mpo_fidelity(ρs, X), X)
+        target_val = mpo_fidelity(ρs, X, ps)
+        grad = gradient(x -> mpo_fidelity(ρs, x, ps), X)
         return target_val, grad[1]
     end
     return fg
@@ -63,27 +64,29 @@ function svd_update(grad)
     return U*V
 end
 
-function optimize_isometry(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}; tol::Float64 = 1e-8, maxit::Int = 50) where {T, S}
+function optimize_isometry(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}, ps::Vector{<:Real}; tol::Float64 = 1e-8, maxit::Int = 50) where {T, S}
     X1 = X
     ϵ = 1
     ix = 1
+    val_old = 1
     while (ϵ > tol) && (ix < maxit)
         @info(crayon"red"("Iteration $ix:"))
         # target_val, grad = target_λ(ρ)(X1)
-        target_val, grad = target_fid(ρ)(X1)
+        target_val, grad = target_fid(ρ, ps)(X1)
         @info(crayon"red"("Target function: $target_val"))
         X2 = svd_update(grad)
         # Gauge fix
         # U = X2*X1'
         # @show norm(X1'*X1-X2'*X2)
-        ϵ = norm(X2-X1)
-        # ϵ = abs(target_val - get_λ(ρ[1], X2))
+        # ϵ = norm(X2-X1)
+        ϵ = abs(target_val - val_old)
         @info(crayon"red"("Convergence: $ϵ"))
         X1 = X2
+        val_old = target_val
         ix += 1
     end
     # target_val, grad = target_λ(ρ)(X1)
-    target_val, grad = target_fid(ρ)(X1)
+    target_val, grad = target_fid(ρ, ps)(X1)
     @info(crayon"red"("Final Target function: $target_val"))
     return X1
 end
