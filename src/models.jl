@@ -12,12 +12,8 @@ function RTFIM_hamiltonian(Js::Vector{Float64}, hs::Vector{Float64})
         disordermap = DiagonalTensorMap(zeros(ComplexF64, D_disorder),ℂ^D_disorder)
         disordermap[i,i] = 1.0
         @tensor U_full[-1 -2 -3; -4 -5 -6] := U[-1 -2; -4 -6]*disordermap[-3; -5]
-        if i == 1
-            Hs = U_full
-        else
-            Hs += U_full
-        end
-        # @show i, h, J
+        Hs += U_full
+        # @show i, hh/(2(s+x))*exp(-a), J
         # Hs[1,:,i, :, i, 1] = Id
         # Hs[2,:,i, :, i, 1] = zeros(ComplexF64, 2, 2)
         # Hs[3,:,i, :, i, 1] = zeros(ComplexF64, 2, 2)
@@ -55,7 +51,7 @@ function random_transverse_field_ising_evolution(Js::Vector{Float64}, hs::Vector
 
     # expHs2 = TensorMap(expHs, ℂ^2⊗ℂ^2⊗ℂ^D_disorder,ℂ^2⊗ℂ^D_disorder⊗ℂ^2)
 
-    alg = TaylorCluster(; N=order, extension=false, compression=false)
+    alg = TaylorCluster(; N=order, extension=true, compression=true)
     # alg = DisorderKit.ClusterExpansion(order)
     D_disorder = length(Js) * length(hs)
     expHs = 0
@@ -81,7 +77,7 @@ function random_transverse_field_ising_evolution(Js::Vector{Float64}, hs::Vector
     return DisorderMPO([expHs])
 end
 
-function RTFIM_time_evolution_Trotter(Δτ::Real, gs::Vector{<:Real}, Js::Vector{<:Real}=[1.0])
+function RTFIM_time_evolution_Trotter(Δτ::Real, gs::Vector{<:Real}, Js::Vector{<:Real}=[1.0], H::Float64=0.0)
     X, Z, Id = zeros(ComplexF64, 2, 2), zeros(ComplexF64, 2, 2), zeros(ComplexF64, 2, 2)
     X[1, 2], X[2, 1] = 1, 1
     Z[1, 1], Z[2, 2] = 1, -1
@@ -91,7 +87,7 @@ function RTFIM_time_evolution_Trotter(Δτ::Real, gs::Vector{<:Real}, Js::Vector
     expHs = zeros(ComplexF64, D_disorder, 4, D_disorder, 4)
     for (i, (g, J)) in enumerate(Iterators.product(gs, Js))
         @show i, g, J
-        expHs[i, :, i, :] = exp(-Δτ * (-J*kron(Z, Z) - g*kron(X, Id)))
+        expHs[i, :, i, :] = exp(-Δτ * (-J*kron(Z, Z) - g*kron(X, Id) - H*kron(Z,Id)))
     end
 
     expHs = reshape(expHs, D_disorder, 2,2, D_disorder, 2,2)
