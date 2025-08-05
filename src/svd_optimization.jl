@@ -28,8 +28,13 @@ function insert_isometry(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}) wher
     return ρ2
 end
 
+# function mpo_transf(ρ1::AbstractDisorderMPOTensor, ρ2::AbstractDisorderMPOTensor, v::AbstractTensorMap{T,S, 1, 1}, P::AbstractTensorMap{Q, R, 1, 1}) where {T, S, R, Q}
+#     @tensor Tv[-1; -2] := P[7; 5] * ρ1[1 3 5; 4 6 -2] * conj(ρ2[2 3 7; 4 6 -1]) * v[2; 1]
+#     return Tv
+# end
+
 function mpo_transf(ρ1::AbstractDisorderMPOTensor, ρ2::AbstractDisorderMPOTensor, v::AbstractTensorMap{T,S, 1, 1}, P::AbstractTensorMap{Q, R, 1, 1}) where {T, S, R, Q}
-    @tensor Tv[-1; -2] := P[7; 5] * ρ1[1 3 5; 4 6 -2] * conj(ρ2[2 3 7; 4 6 -1]) * v[2; 1]
+    @tensor Tv[-1; -2] := ρ1[1 3 5; 4 6 -2] * conj(ρ2[2 3 5; 4 6 -1]) * v[2; 1]
     return Tv
 end
 
@@ -47,7 +52,7 @@ end
 function mpo_fidelity(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}, ps::Vector{<:Real}) where {T, S}
     ρ1 = ρ[1]
     ρ2 = insert_isometry(ρ, X)
-    return norm(mpo_ovlp(ρ1, ρ2, ps) * mpo_ovlp(ρ2, ρ1, ps) / mpo_ovlp(ρ2, ρ2, ps))
+    return norm(mpo_ovlp(ρ1, ρ2, ps) * mpo_ovlp(ρ2, ρ1, ps) /(mpo_ovlp(ρ1, ρ1, ps) * mpo_ovlp(ρ2, ρ2, ps)))
 end
 
 function target_fid(ρs::DisorderMPO, ps::Vector{<:Real})
