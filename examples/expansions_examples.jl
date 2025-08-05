@@ -16,8 +16,9 @@ order = 3
 invtol = 1e-6
 trunctol = 1e-6
 D_max = 20
-alg_inversion = VOMPS_Inversion(1; tol = 1e-8, maxiter = 100, verbosity = 2)
-alg_trunc_Z = StandardTruncation(trunc_method = truncerr(trunctol))
+D_z = 2
+alg_inversion = VOMPS_Inversion(1; tol = 1e-8, maxiter = 50, verbosity = 2)
+alg_trunc_Z = StandardTruncation(trunc_method = truncdim(D_z))
 
 # alg = DisorderTracedTruncation(trunc_method = truncdim(D_max))
 alg = DisorderOpenTruncation(trunc_method = truncdim(D_max))
@@ -33,8 +34,8 @@ labels = [L"\text{Trotter}", L"\text{Taylor}%$(order)"]
 # Evolve density matrix
 function get_ξ(βs, Us, ps, alg_trunc_disordermpo)
     ξs = zeros(length(βs))
-    DZs = zeros(Int,length(βs))
     times = zeros(Float64,length(βs))
+    normtimes = zeros(Float64,length(βs))
     ϵs = []
     ρ0 = nothing
     nsteps = round(Int, βs[1]/dτ)
@@ -47,16 +48,18 @@ function get_ξ(βs, Us, ps, alg_trunc_disordermpo)
         inversion_frequency = 1
         alg_evolution = iDTEBD(alg_inversion, alg_trunc_Z, alg_trunc_disordermpo; invtol = invtol, nsteps = nsteps, verbosity = 2, truncfrequency = 1, inversion_frequency = inversion_frequency, timer_output = TimerOutput(), max_inverse_dim = 2)
         ρs, ϵ = evolve_densitymatrix(Us, ps, alg_evolution; ρ0 = ρ0)
+        # COmpute Correlation Length
         ξs[i] = average_correlation_length(ρs, ps)
-        Z = partition_functions(ρs)
-        Z = truncate_mpo(Z, alg_trunc_Z)
-        DZs[i] = dim(space(Z[1])[1])
+        # Compute time elapsed for truncation
         time_elapsed = TimerOutputs.time(alg_evolution.timer_output["truncate_disorder_MPO"])
         times[i] = 1e-9*time_elapsed./ TimerOutputs.ncalls(alg_evolution.timer_output["truncate_disorder_MPO"])
+        # Compute time elapsed for normalization
+        normtime_elapsed = TimerOutputs.time(alg_evolution.timer_output["normalize_each_disorder_sector"])
+        normtimes[i] = 1e-9*normtime_elapsed./ TimerOutputs.ncalls(alg_evolution.timer_output["normalize_each_disorder_sector"])
         ρ0 = ρs
         push!(ϵs, ϵ...)
     end
-    return ξs, ϵs, DZs, times
+    return ξs, ϵs, times, normtimes
 end
 
 # Set up the figure and axes
@@ -82,15 +85,16 @@ set_theme!(theme_latexfonts())
     )
     ax4 = Axis(fig[2, 2], 
         xlabel = L"$β$",
-        ylabel = L"$D_\mathcal{Z}$",
+        ylabel = L"$\bar{t}_{\text{norm}}(s)$",
         # xscale = log10,
         # yscale = log10
     )
 
 
+
 for (ix, Us) in enumerate(mpos)
 
-    ξs, ϵs, DZs, times = get_ξ(βs, Us, ps, alg)
+    ξs, ϵs, trunctimes, normtimes = get_ξ(βs, Us, ps, alg)
 
     # Rescale ξs
     # ξs ./= ξs[1]
@@ -100,17 +104,16 @@ for (ix, Us) in enumerate(mpos)
     linmodel(t, p) = p[1] .+ p[2]*t
     p0 = [1., 1.]
     linfit = curve_fit(linmodel, log.(βs[1:maxfit]).^2, ξs[1:maxfit], p0)
-    global linparams = linfit.param
 
     # Plot correlation lengths in function of β
     scatter!(ax1,log.(βs).^2, ξs, label=labels[ix],markersize = 16)
-    lines!(ax1,log.(βs).^2, linmodel(log.(βs).^2,linparams), label=L"$p_2=%$(linparams[2])$")
+    lines!(ax1,log.(βs).^2, linmodel(log.(βs).^2,linfit.param), label=L"$p_2=%$(linfit.param[2])$")
 
     scatter!(ax2,dτ:dτ:βs[end],ϵs.+1e-16, label=labels[ix],markersize = 16)
 
-    scatter!(ax3, βs, times, label=labels[ix],markersize = 16)
+    scatter!(ax3, βs, trunctimes, label=labels[ix],markersize = 16)
 
-    scatter!(ax4,βs,DZs, label=labels[ix],markersize = 16)
+    scatter!(ax4, βs, normtimes, label=labels[ix],markersize = 16)
 end
 
 fig[1, 3] = Legend(fig, ax1, framevisible = false)

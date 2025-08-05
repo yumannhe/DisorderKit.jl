@@ -8,7 +8,7 @@ function local_E(ρ::DisorderMPO,ps::Vector{Float64}, Js::Vector{Float64}, hs::V
     Etotal = 0
     for (j, (h, J)) in enumerate(Iterators.product(hs, Js)) 
         Eh = -measure(ρ, ps, X, i)*h
-        EJ = -measure(ρ, ps, Z, Z, i, 1)*J/2+-measure(ρ, ps, Z, Z, i, -1)*J/2
+        EJ = -measure(ρ, ps, Z, Z, i, 1)*J/2-measure(ρ, ps, Z, Z, i-1, 1)*J/2
         Etotal += Eh + EJ
     end
     return Etotal
@@ -16,31 +16,27 @@ end
 
 # Define model
 N = 2
-a = 0.01
-b = 0.5
+a = 0.7
+b = 1.3
 
 Js = Vector(a:(b-a)/(N-1):b)
 hs = Vector(a:(b-a)/(N-1):b)
 ps = ones(N^2)./N^2
-# Js = [1.0]
-# hs = [1.0]
-# ps = [1.0]
 
 # Define Time-Evolution Operator
 dτ = 5e-2
 Us = RTFIM_time_evolution_Trotter(dτ, hs, Js)
 Us = DisorderMPO([Us[1]])
-Hs = RTFIM_hamiltonian(Js, hs)
 
 # Define algorithms
 invtol = 1e-6
-D_max = 20
-D_z = 4
+D_max = 40
+D_z = 2
 alg_inversion = VOMPS_Inversion(1; tol = 1e-8, maxiter = 250, verbosity = 2)
 alg_trunc_Z = StandardTruncation(trunc_method = truncdim(D_z))
 alg_trunc_disordermpo = DisorderOpenTruncation(trunc_method = truncdim(D_max))
 
-βs = 1:0.5:15
+βs = 1:0.5:10
 # Evolve density matrix
 function get_ξ(βs, Us)
     ξs = zeros(length(βs))
@@ -57,8 +53,9 @@ function get_ξ(βs, Us)
         inversion_frequency = 1
         alg_evolution = iDTEBD(alg_inversion, alg_trunc_Z, alg_trunc_disordermpo; invtol = invtol, nsteps = nsteps, verbosity = 2, truncfrequency = 1, inversion_frequency = inversion_frequency, timer_output = TimerOutput(), max_inverse_dim = 2)
         ρs, ϵ = evolve_densitymatrix(Us, ps, alg_evolution; ρ0 = ρ0)
+        # Compute correlation length
         ξs[i] = average_correlation_length(ρs, ps)
-        # Es[i] = measure(ρs, ps, Hs, 1)
+        # Measure local energy density
         Es[i] = local_E(ρs, ps, Js, hs, 1)
         ρ0 = ρs
         push!(ϵs, ϵ...)
@@ -115,7 +112,7 @@ lines!(ax1,log.(βs).^2, linmodel(log.(βs).^2,linparams), label=L"$p_2=%$(linpa
 scatter!(ax2,dτ:dτ:βs[end],ϵs.+1e-16, label=L"D=%$(D_max)",markersize = 16)
 
 # Plot average thermal energy in function of β
-scatter!(ax3, βs, real.(Es), label=L"Real",markersize = 16)
+scatter!(ax3, βs[3:end], real.(Es[3:end]), label=L"Real",markersize = 16)
 # scatter!(ax3, βs, imag.(Es), label=L"Imaginary",markersize = 16)
 
 # Plot specific heat in function of β
