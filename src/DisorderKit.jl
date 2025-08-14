@@ -12,7 +12,7 @@ export DisorderMPO, measure, partition_functions, disorder_average, average_corr
 export StandardTruncation, DisorderTracedTruncation, DisorderOpenTruncation,  SVDUpdateTruncation, truncate_mpo
 export iDTEBD, evolve_densitymatrix, evolve_one_time_step
 export random_transverse_field_ising_evolution, RTFIM_time_evolution_Trotter, RBH_time_evolution_Trotter, RTFIM_hamiltonian
-export sample_correlation_length
+export sample_correlation_length, average_renyi_entropy2, renyi_entropy2
 
 const AbstractMPSTensor = AbstractTensorMap{T, S, 2, 1} where {T, S}
 const AbstractMPOTensor = AbstractTensorMap{T, S, 2, 2} where {T, S}
@@ -29,7 +29,6 @@ include("svd_optimization.jl")
 include("mpo_truncation.jl")
 include("iDTEBD.jl")
 include("models.jl")
-include("cluster_expansion.jl")
 include("sampling_observables.jl")
 
 end # module DisorderKit
