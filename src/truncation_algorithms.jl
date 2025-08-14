@@ -28,10 +28,11 @@ DisorderOpenTruncation(; trunc_method::TruncationScheme = truncerr(1e-6), verbos
 # Truncation algorithm for the disorder MPO by using SVD optimization for isometries
 struct SVDUpdateTruncation <: AbstractTruncationAlgorithm
     D_max::Int
-    tol::Float64
+    conv_tol::Float64
+    f_tol::Float64
     maxit::Int
     verbosity::Int
 end
 
-SVDUpdateTruncation(D_max::Int; tol::Float64 = 1e-8, maxit::Int = 10, verbosity::Int = 0) = SVDUpdateTruncation(D_max, tol, maxit, verbosity)
+SVDUpdateTruncation(D_max::Int; conv_tol::Float64 = 1e-8, f_tol::Float64, maxit::Int = 10, verbosity::Int = 0) = SVDUpdateTruncation(D_max, conv_tol, f_tol, maxit, verbosity)
 
