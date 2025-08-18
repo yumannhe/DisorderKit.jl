@@ -161,69 +161,73 @@ end
 
 # measure the disorder average of a disorder operator on site i
 function measure(ρ::DisorderMPO, ps::Vector{<:Real}, Os::DisorderMPO, i::Int)
-    ρO_weighted = disorder_average(ρ, ps)
-    TMs = map(ρO_weighted) do ρx
+    ρ_weighted = disorder_average(ρ, ps)
+    TMs = map(ρ_weighted) do ρx
         @tensor TM[-1; -2] := ρx[-1 1; 1 -2]
         return TM
     end
     TMs = PeriodicArray(TMs)
 
-    M = length(ρO_weighted)
+    M = length(ρ_weighted)
     TMl = prod(map(ix->TMs[ix], i-M:i-1))
     TMr = prod(map(ix->TMs[ix], i+1:i+M))
 
-    vl = Tensor(rand, ComplexF64, space(ρO_weighted[i], 1)')
-    vr = Tensor(rand, ComplexF64, space(ρO_weighted[i], 4)')
+    vl = Tensor(rand, ComplexF64, space(ρ_weighted[i], 1)')
+    vr = Tensor(rand, ComplexF64, space(ρ_weighted[i], 4)')
     vl = permute(vl, ((), (1,)))
 
-    vals, vls = eigsolve(x->x*TMl, vl, 3, :LM)
+    vals, vls = eigsolve(x->x*TMl, vl, 1, :LM)
     _, vrs = eigsolve(x->TMr*x, vr, 1, :LM)
     vl = vls[1]
     vr = vrs[1]
     λ0 = vals[1]
     N0 = vl*vr
 
-    ρ_weighted = disorder_average(ρ*Os, ps)
-    TMs2 = map(ρ_weighted) do ρx
+    ρO_weighted = disorder_average(ρ*Os, ps)
+    TMs2 = map(ρO_weighted) do ρx
         @tensor TM[-1; -2] := ρx[-1 1; 1 -2]
         return TM
     end
 
     TMs2 = PeriodicArray(TMs2)
 
-    M = length(ρ_weighted)
+    M = length(ρO_weighted)
     TMl2 = prod(map(ix->TMs2[ix], i-M:i-1))
     TMr2 = prod(map(ix->TMs2[ix], i+1:i+M))
 
-    vl2 = Tensor(rand, ComplexF64, space(ρ_weighted[i], 1)')
-    vr2 = Tensor(rand, ComplexF64, space(ρ_weighted[i], 4)')
+    vl2 = Tensor(rand, ComplexF64, space(ρO_weighted[i], 1)')
+    vr2 = Tensor(rand, ComplexF64, space(ρO_weighted[i], 4)')
     vl2 = permute(vl2, ((), (1,)))
 
-    vals2, vls2 = eigsolve(x->x*TMl2, vl2, 3, :LM)
-    valsr2, vrs2 = eigsolve(x->TMr2*x, vr2, 3, :LM)
-    vl2 = vls2[1]
+    vals2, vls2 = eigsolve(x->x*TMl2, vl2, 1, :LM)
+    valsr2, vrs2 = eigsolve(x->TMr2*x, vr2, 1, :LM)
+    # vl2 = vls2[1]
     vr2 = vrs2[1]
+    vl2 = vr2'
     λ = vals2[1]
     N = vl2*vr2
-    N2 = vl2*vrs2[2]
-    # @tensor O_res = vl[1] * ρO_weighted[i][1 3; 3 2] * vr[2]
 
-    Ns = [(vls2[i]*vrs2[j])[1] for i in 1:2, j in 1:2]
-    @show λ, λ0, N0[1], N[1], N2[1]
+    @tensor O_res = vl2[1] * ρO_weighted[i][1 3; 3 2] * vr2[2]
+    @show vals2
+    # Ns = [(vls2[i]*vrs2[j])[1] for i in 1:2, j in 1:2]
+    @show λ, λ0, N[1]
     # @show Ns
     @show norm(vl2), norm(vr2)
     # @show vals
     # @show vals2
     # @show TMs2
     # @show TMs
-    return 1/N0[1]*λ/λ0
+    return O_res
 end
 
 # Fix phase of the disorder MPO after multiplying with inverse partition function
-function fix_phase(ρs::DisorderMPO)
+function fix_phase(ρs::DisorderMPO, ps::Vector{Float64})
+    L = length(ρs)
     Zs = partition_functions(ρs)
+    D_disorder = length(ps)
+    P = TensorMap(diagm(ps), ℂ^D_disorder, ℂ^D_disorder)
     TMs = map(Zs) do Z
-        @tensor TM[-1; -2] := Z[-1 1; 1 -2]
+        @tensor TM[-1; -2] := Z[-1 2; 1 -2]*P[1;2]
         return TM
     end
 
@@ -240,13 +244,13 @@ function fix_phase(ρs::DisorderMPO)
     vr = vrs[1]
 
     d = dim(space(ρs[1],3))
-    ρ_normalized = rescale(ρs, [d/sqrt(λ) for ix in 1:length(ρs)])
+    ρ_normalized = rescale(ρs, [(1/λ)^(1/L) for ix in 1:length(ρs)])
 
     return ρ_normalized
 end
 
 # Normalize the density matrix in each disorder sector
-function normalize_each_disorder_sector(ρ::DisorderMPO, trunc_alg::AbstractTruncationAlgorithm, inversion_alg::AbstractInversionAlgorithm; init_guess::Union{InfiniteMPO,Nothing} = nothing, verbosity::Int = 0, invtol::Float64 = 1e-8)
+function normalize_each_disorder_sector(ρ::DisorderMPO, ps::Vector{Float64}, trunc_alg::AbstractTruncationAlgorithm, inversion_alg::AbstractInversionAlgorithm; init_guess::Union{InfiniteMPO,Nothing} = nothing, verbosity::Int = 0, invtol::Float64 = 1e-8)
     (verbosity > 0) && (@info(crayon"yellow"("Normalizing Each Disorder sector")))
 
     # Compute partition function
@@ -275,7 +279,7 @@ function normalize_each_disorder_sector(ρ::DisorderMPO, trunc_alg::AbstractTrun
 
     # Fix phase ambiguity
     (verbosity > 0) && (@info(crayon"yellow"("Fix Phase")))
-    ρ_normalized = fix_phase(ρ_product)
+    ρ_normalized = fix_phase(ρ_product, ps)
 
     return ρ_normalized, ϵ_acc, mpoZinv
 end
@@ -304,4 +308,50 @@ function average_correlation_length(ρs::DisorderMPO, ps::Vector{<:Real})
     ξ = real(unit_cell/log(λ1/λ2))
 
     return ξ
+end
+
+# Renyi entropy of InfiniteMPO
+function average_renyi_entropy2(ρs::DisorderMPO, ps::Vector{Float64}, L::Int)
+    length(ρs) == 1 || error("Only single unitcell is implemented")
+    unit_cell = length(ρs)
+    D_disorder = length(ps)
+    P = TensorMap(diagm(ps), ℂ^D_disorder, ℂ^D_disorder)
+    
+    O = ρs[1]
+    function apply_Otracedl(O,P,v)
+        @tensor result[-1 -2] := v[1 2]*O[1 3 7;3 6 -1]*O[2 4 6; 4 5 -2]*P[5;7]
+        return result
+    end
+    function apply_Otracedr(O,P,v)
+        @tensor result[-1 -2] := v[1 2]*O[-1 3 7;3 6 1]*O[-2 4 6; 4 5 2]*P[5;7]
+        return result
+    end
+
+    vr = Tensor(rand, ComplexF64, space(O, 6)'⊗space(O, 6)')
+    vl = Tensor(rand, ComplexF64, space(O, 1)'⊗space(O,1)')
+    # vl = permute(vl, ((), (1,2)))
+
+    λs, vrs = eigsolve(x->apply_Otracedr(O,P,x), vr, 1, :LM)
+    _, vls = eigsolve(x->apply_Otracedl(O,P,x), vl, 1, :LM)
+    λ = λs[1]
+    vr = vrs[1]
+    vl = vls[1]
+    
+    right = vr
+    left = vl
+    function transfer_r(A,P,vr)
+        @tensor result[-1 -2] := A[-1 3 7; 4 6 1] * A[-2 4 6; 3 5 2] * vr[1 2]*P[5;7]
+        return result
+    end
+
+    Nright = vr
+    for i in 1:L
+        right = transfer_r(O,P, right)
+        Nright = apply_Otracedr(O,P,Nright)
+    end
+    @tensor S = left[1 2]*right[1 2]
+    @tensor N = vl[1 2]*Nright[1 2]
+    # S = -log(S)
+    S = -log.(S/N)
+    return S
 end

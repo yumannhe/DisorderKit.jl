@@ -24,7 +24,7 @@ alg_trunc_Z = StandardTruncation(trunc_method = truncdim(D_z))
 
 alg_trunc_disordermpo1 = DisorderTracedTruncation(trunc_method = truncdim(D_max))
 alg_trunc_disordermpo2 = DisorderOpenTruncation(trunc_method = truncdim(D_max))
-alg_trunc_disordermpo3 = SVDUpdateTruncation(D_max, tol = 1e-2, maxit = 50, verbosity = 2)
+alg_trunc_disordermpo3 = SVDUpdateTruncation(D_max, conv_tol = 1e-4, f_tol = 1e-4, maxit = 50, verbosity = 2)
 
 truncation_algorithms = [alg_trunc_disordermpo3, alg_trunc_disordermpo1, alg_trunc_disordermpo2]
 labels = [L"\text{SVD optim}", L"\text{Traced Disorder}", L"\text{Open Disorder}"]

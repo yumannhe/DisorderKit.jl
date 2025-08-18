@@ -63,6 +63,48 @@ function test_identity_random(Os::InfiniteMPO; n_samples::Int = 5)
     return maximum(ϵs)
 end
 
+# Renyi entropy of InfiniteMPO
+function renyi_entropy2(Os::InfiniteMPO, L::Int)
+    length(Os) == 1 || error("Only single unitcell is implemented")
+    unit_cell = length(Os)
+
+    O = Os[1]
+    @tensor O_traced[-1; -2] := O[-1 1;1 -2]
+
+    vr = Tensor(rand, ComplexF64, space(O_traced, 2)')
+    vl = Tensor(rand, ComplexF64, space(O_traced, 1)')
+    vl = permute(vl, ((), (1,)))
+
+    λs, vrs = eigsolve(x->O_traced*x, vr, 1, :LM)
+    _, vls = eigsolve(x->x*O_traced, vl, 1, :LM)
+    @show λs
+    λ = λs[1]
+    vr = vrs[1]
+    vl = vls[1]
+
+    @tensor right[-1 -2] := vr[-1]*vr[-2]
+    @tensor left[-1 -2] := vl[-1]*vl[-2]
+    function transfer_r(A::AbstractMPOTensor,v)
+        @tensor result[-1 -2] := A[-1 3; 4 1] * A[-2 4; 3 2] * v[1 2]
+        return result
+    end
+
+    Nright = vr
+    for i in 1:L
+        right = transfer_r(O, right)
+        Nright = O_traced*Nright
+    end
+    @tensor S = left[1 2]*right[1 2]
+    @tensor N = vl[1]*vr[1]
+    @show norm(N)
+    @show S, N^2
+    @show S/N^2
+    # N *= λ^(L)
+    S = -log.(S/N^2)
+    # S = -log.(S)
+    return S
+end
+
 # MPO environments used in truncation
 function env_left(Os::InfiniteMPO, ix::Int)
     v1 = TensorMap(rand, ComplexF64, space(Os[ix+1], 1), space(Os[ix+1], 1))

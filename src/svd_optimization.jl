@@ -69,16 +69,19 @@ function svd_update(grad)
     return U*V
 end
 
-function optimize_isometry(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}, ps::Vector{<:Real}; tol::Float64 = 1e-8, maxit::Int = 50) where {T, S}
+function optimize_isometry(ρ::DisorderMPO, X::AbstractTensorMap{T, S, 1, 1}, ps::Vector{<:Real}; conv_tol::Float64 = 1e-6, f_tol::Float64 = 1e-6, maxit::Int = 50) where {T, S}
     X1 = X
     ϵ = 1
+    ϵ_f = 1
     ix = 1
     val_old = 1
-    while (ϵ > tol) && (ix < maxit)
+    while (ϵ > conv_tol) && (ix < maxit) && (ϵ_f > f_tol)
         @info(crayon"red"("Iteration $ix:"))
         # target_val, grad = target_λ(ρ)(X1)
         target_val, grad = target_fid(ρ, ps)(X1)
+        ϵ_f = abs(1-target_val)
         @info(crayon"red"("Target function: $target_val"))
+        @info(crayon"red"("Target convergence: $ϵ_f"))
         X2 = svd_update(grad)
         # Gauge fix
         # U = X2*X1'
