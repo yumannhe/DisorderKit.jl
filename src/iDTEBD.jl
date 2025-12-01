@@ -18,7 +18,7 @@ struct  iDTEBD <: AbstractAlgorithm
     end
 end
 
-function evolve_densitymatrix(Ts::DisorderMPO, ps::Vector{<:Real}, alg::iDTEBD; ρ0 = nothing)
+function evolve_densitymatrix(Ts::DisorderMPO, ps::Vector{<:Real}, alg::iDTEBD, iter::Int; ρ0 = nothing)
     ρs = isnothing(ρ0) ? deepcopy(Ts) : ρ0
     ϵs = zeros(alg.nsteps)
     mpoZinv = nothing
@@ -49,7 +49,7 @@ function evolve_densitymatrix(Ts::DisorderMPO, ps::Vector{<:Real}, alg::iDTEBD; 
         if mod(ix, alg.truncfrequency) == 0
             (alg.verbosity > 0) && (@info(crayon"magenta"("Truncating ρ")))
             (alg.verbosity > 1) && (@info(crayon"magenta"("Before truncation: Bonddimension of ρ = $(dim(space(ρs_normalized[1])[1]))")))
-            @timeit alg.timer_output "truncate_disorder_MPO" ρs = truncate_mpo(ρs_normalized, ps, alg.alg_trunc_disordermpo)
+            @timeit alg.timer_output "truncate_disorder_MPO step $iter" ρs = truncate_mpo(ρs_normalized, ps, alg.alg_trunc_disordermpo)
             (alg.verbosity > 1) && (@info(crayon"magenta"("After truncation: Bonddimension of ρ = $(dim(space(ρs[1])[1]))")))
         end
         ϵs[ix] = ϵ_acc

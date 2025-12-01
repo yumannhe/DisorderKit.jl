@@ -223,29 +223,31 @@ function iterate_rc_svd(R, A, Vt; conv_tol=1e-12, max_iter=20, trunc=truncbelow(
 end
 
 
-
+partitionL = ((1,2,3,4,5,),(6,))
+partitionR = ((1,),(2,3,4,5,6,))
 filename = "rho_step1.jld2"
 ρlist = load(filename, "ρsub")
+trunc1 = truncbelow(1e-10)
 ite_keeper = length(ρlist)
-truncfinal = truncdim(D_max)
+# truncfinal = truncdim(D_max)
 for ite in 1:ite_keeper
     ρ = ρlist[ite][1]
     # initialize L and R, first check the unnormalized case
     @show space(ρ)
-    Uρl, Sρl, Vtρl = tsvd(ρ, partitionL;trunc)
+    Uρl, Sρl, Vtρl = tsvd(ρ, partitionL;trunc=trunc1)
     @show space(Sρl)
     Lρp = Sρl*Vtρl
     ulphase, Lρ = leftorth(Lρp)
     Uρl = Uρl*ulphase
     Lρ = Lρ / norm(Lρ)
-    Uρr, Sρr, Vtρr = tsvd(ρ, partitionR;trunc)
+    Uρr, Sρr, Vtρr = tsvd(ρ, partitionR;)
     @show space(Sρr)
     Rρp = Uρr*Sρr
     Rρ, urphase = rightorth(Rρp)
     Vtρr = urphase*Vtρr
     Rρ = Rρ / norm(Rρ)
     t_lc_svd = @elapsed begin
-        Uρ, Lρfinal, S_Lρ = iterate_lc(Lρ, ρ;)
+        Uρ, Lρfinal, S_Lρ = iterate_lc(Lρ, ρ;trunc=trunc1)
     end
     println("SVDQR Left took $(t_lc_svd) seconds") 
     t_rc_svd = @elapsed begin
@@ -255,7 +257,7 @@ for ite in 1:ite_keeper
     # check the LR and entanglement spectrum 
     Cρ = Lρfinal*Rρfinal
     # UL, Sρ, VtR = tsvd(Cρ; trunc=truncfinal)
-    UL, Sρ, VtR = tsvd(Cρ; trunc=trunc)
+    UL, Sρ, VtR = tsvd(Cρ, ((1,),(2,));trunc=trunc1)
     d = dim(space(Sρ,1))
     @show d, Sρ[d,d]
     @tensor ALρ[-1 -2 -3; -4 -5 -6] := conj(UL[1 ;-1]) * Uρ[1 -2 -3;-4 -5 2] * UL[2;-6]
@@ -274,11 +276,11 @@ for ite in 1:ite_keeper
     ρ = ρlist[ite][1]
     # initialize L and R, first check the unnormalized case
     @show space(ρ)
-    Uρl, Sρl, Vtρl = tsvd(ρ, partitionL;trunc)
+    Uρl, Sρl, Vtρl = tsvd(ρ, partitionL;trunc=trunc1)
     @show space(Sρl)
     Lρ = Sρl*Vtρl
     Lρ = Lρ / norm(Lρ)
-    Uρr, Sρr, Vtρr = tsvd(ρ, partitionR;trunc)
+    Uρr, Sρr, Vtρr = tsvd(ρ, partitionR;trunc=trunc1)
     @show space(Sρr)
     Rρ = Uρr*Sρr
     Rρ = Rρ / norm(Rρ)
@@ -293,7 +295,7 @@ for ite in 1:ite_keeper
     # check the LR and entanglement spectrum 
     Cρ = Lρfinal*Rρfinal
     # UL, Sρ, VtR = tsvd(Cρ; trunc=truncfinal)
-    UL, Sρ, VtR = tsvd(Cρ; trunc=trunc)
+    UL, Sρ, VtR = tsvd(Cρ, ((1,),(2,)); trunc=trunc1)
     d = dim(space(Sρ,1))
     @show d, Sρ[d,d]
     # @tensor ALρ[-1 -2 -3; -4 -5 -6] := conj(UL[1 ;-1]) * Uρ[1 -2 -3;-4 -5 2] * UL[2;-6]
