@@ -4,315 +4,1525 @@
 (i, g, J) = (4, 1.3, 1.3)
 (space(L), space(S), space(R)) = ((ℂ^4 ⊗ ℂ^2 ⊗ (ℂ^4)' ⊗ (ℂ^2)') ← ℂ^3, ℂ^3 ← ℂ^3, ℂ^3 ← ((ℂ^2)' ⊗ ℂ^2))
 (i, β) = (1, 0.05)
-(it, diff) = (0, 6.967437879001027e-5)
-(it, diff) = (1, 6.967437879001027e-5)
-(it, diff) = (1, 1.5686730763226833e-8)
-(it, diff) = (2, 1.5686730763226833e-8)
-(it, diff) = (2, 5.848612910673815e-10)
-(it, diff) = (3, 5.848612910673815e-10)
-(it, diff) = (3, 2.403533311690346e-9)
-(it, diff) = (4, 2.403533311690346e-9)
-(it, diff) = (4, 5.270413655487121e-10)
-(it, diff) = (5, 5.270413655487121e-10)
-(it, diff) = (5, 9.052787157612091e-11)
-(it, diff) = (6, 9.052787157612091e-11)
-(it, diff) = (6, 8.362311339205086e-11)
-(it, diff) = (7, 8.362311339205086e-11)
-(it, diff) = (7, 7.036875369118607e-11)
-(it, diff) = (8, 7.036875369118607e-11)
-(it, diff) = (8, 1.1715128086106252e-9)
-(it, diff) = (9, 1.1715128086106252e-9)
-(it, diff) = (9, 5.321427700669514e-10)
-(it, diff) = (10, 5.321427700669514e-10)
-(it, diff) = (10, 4.807075453160092e-10)
-(it, diff) = (11, 4.807075453160092e-10)
-(it, diff) = (11, 5.717073113398051e-10)
-(it, diff) = (12, 5.717073113398051e-10)
-(it, diff) = (12, 5.65983109894722e-10)
-(it, diff) = (13, 5.65983109894722e-10)
-(it, diff) = (13, 9.677360858707935e-11)
-(it, diff) = (14, 9.677360858707935e-11)
-(it, diff) = (14, 3.42199767498271e-11)
-(it, diff) = (15, 3.42199767498271e-11)
-(it, diff) = (15, 4.4180444165072564e-11)
-(it, diff) = (16, 4.4180444165072564e-11)
-(it, diff) = (16, 4.923536788379779e-10)
-(it, diff) = (17, 4.923536788379779e-10)
-(it, diff) = (17, 8.868230286942437e-10)
-(it, diff) = (18, 8.868230286942437e-10)
-(it, diff) = (18, 2.632334613211283e-10)
-(it, diff) = (19, 2.632334613211283e-10)
-(it, diff) = (19, 3.408501798868323e-11)
-(it, diff) = (20, 3.408501798868323e-11)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 3[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 3[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 1[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 0.0[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 3[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 3[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 9[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 9[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 1.918526148958523e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 9[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 9[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 9[39m
+(it, diff) = (0, 0.1361921709603972)
+(it, diff) = (1, 6.967437878996077e-5)
+(it, diff) = (2, 1.5686730498382493e-8)
+(it, diff) = (3, 3.2574234587518803e-12)
+(it, diff) = (4, 2.562300364170584e-10)
+(it, diff) = (5, 5.615622904156214e-10)
+(it, diff) = (6, 5.239474595575713e-11)
+(it, diff) = (7, 8.378973992452963e-10)
+(it, diff) = (8, 7.979420634294129e-11)
+(it, diff) = (9, 4.687392461560454e-12)
+(it, diff) = (10, 2.0500573324904507e-11)
+(it, diff) = (11, 8.486027425296644e-10)
+(it, diff) = (12, 8.531400345553396e-12)
+(it, diff) = (13, 1.6672811735488739e-10)
+(it, diff) = (14, 1.9420582868723428e-10)
+(it, diff) = (15, 2.681299005988842e-10)
+(it, diff) = (16, 7.439784819704801e-10)
+(it, diff) = (17, 9.423473422425882e-11)
+(it, diff) = (18, 1.91021550949847e-10)
+(it, diff) = (19, 6.029259615552347e-10)
+(it, diff) = (20, 3.7176133392322467e-13)
 (it, diff) = (0, 0.1352566062065394)
-(it, diff) = (1, 0.0005498579569796655)
-(it, diff) = (2, 6.836501828015586e-9)
-(it, diff) = (3, 3.407310339172825e-16)
+(it, diff) = (1, 0.0005498579569801117)
+(it, diff) = (2, 6.836501594370258e-9)
+(it, diff) = (3, 1.5490732397679864e-16)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 7[39m
 (i, β) = (2, 0.1)
-(it, diff) = (0, 0.0003101104491727147)
-(it, diff) = (1, 0.0003101104491727147)
-(it, diff) = (1, 7.598025227890468e-7)
-(it, diff) = (2, 7.598025227890468e-7)
-(it, diff) = (2, 1.2132120055158249e-14)
-(it, diff) = (3, 1.2132120055158249e-14)
-(it, diff) = (1, 0.0009088494077513679)
-(it, diff) = (2, 3.6417606618494014e-9)
-(it, diff) = (3, 3.969587828350546e-10)
-(it, diff) = (4, 9.849202982894297e-11)
-(it, diff) = (5, 1.3013114995918779e-10)
-(it, diff) = (6, 1.4450607396198321e-10)
-(it, diff) = (7, 4.553382545480737e-11)
-(it, diff) = (8, 6.838907532246525e-10)
-(it, diff) = (9, 5.168712414061429e-10)
-(it, diff) = (10, 1.4270854115582133e-10)
-(it, diff) = (11, 3.709836188599943e-10)
-(it, diff) = (12, 1.1099288849191282e-9)
-(it, diff) = (13, 7.354367349816598e-10)
-(it, diff) = (14, 7.61054934812617e-10)
-(it, diff) = (15, 3.291409007444199e-10)
-(it, diff) = (16, 3.938556125795486e-10)
-(it, diff) = (17, 7.89504020803887e-10)
-(it, diff) = (18, 6.556920999837798e-10)
-(it, diff) = (19, 3.3007459104496393e-10)
-(it, diff) = (20, 3.9933951157348e-11)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 7[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 7[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 1.917656900188248e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 7[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 7[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 21[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 21[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 6.600982777452242e-9[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 21[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 21[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 21[39m
+(it, diff) = (0, 0.029605330907279574)
+(it, diff) = (1, 0.00029153075894252197)
+(it, diff) = (2, 5.081222687320322e-7)
+(it, diff) = (3, 2.5135785744416963e-15)
+(it, diff) = (1, 0.0009088490699466276)
+(it, diff) = (2, 3.7608410196872744e-9)
+(it, diff) = (3, 1.694373840705864e-9)
+(it, diff) = (4, 4.4738672343260424e-10)
+(it, diff) = (5, 2.5426840816150674e-9)
+(it, diff) = (6, 1.3333687771291548e-9)
+(it, diff) = (7, 4.0561173192098786e-10)
+(it, diff) = (8, 1.1190151745204293e-9)
+(it, diff) = (9, 1.1136230606812518e-9)
+(it, diff) = (10, 6.17209372028312e-10)
+(it, diff) = (11, 1.2704078144822557e-9)
+(it, diff) = (12, 9.239106881829782e-10)
+(it, diff) = (13, 1.3399830404459424e-10)
+(it, diff) = (14, 1.6642046436566004e-9)
+(it, diff) = (15, 2.4003648537765736e-10)
+(it, diff) = (16, 9.715018049367098e-10)
+(it, diff) = (17, 3.888750625518e-10)
+(it, diff) = (18, 4.733764247558755e-10)
+(it, diff) = (19, 1.1713063381526778e-9)
+(it, diff) = (20, 5.867955187298803e-11)
+┌ Warning: [31mIteration not accurate: diff = 5.867955187298803e-11[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/mpo_truncation.jl:229
+[ Info: [35mAfter truncation: Bonddimension of ρ = 14[39m
 (i, β) = (3, 0.15)
-(it, diff) = (1, 1.724433990848436e-5)
-(it, diff) = (2, 1.724433990848436e-5)
-(it, diff) = (2, 6.746073860594854e-8)
-(it, diff) = (3, 6.746073860594854e-8)
-(it, diff) = (3, 7.507462635728185e-11)
-(it, diff) = (4, 7.507462635728185e-11)
-(it, diff) = (4, 1.1740461437327535e-10)
-(it, diff) = (5, 1.1740461437327535e-10)
-(it, diff) = (5, 2.2467650621151883e-11)
-(it, diff) = (6, 2.2467650621151883e-11)
-(it, diff) = (6, 1.0835307178854405e-10)
-(it, diff) = (7, 1.0835307178854405e-10)
-(it, diff) = (7, 1.1639054718328406e-11)
-(it, diff) = (8, 1.1639054718328406e-11)
-(it, diff) = (8, 1.0790394656678417e-10)
-(it, diff) = (9, 1.0790394656678417e-10)
-(it, diff) = (9, 5.882996906686784e-11)
-(it, diff) = (10, 5.882996906686784e-11)
-(it, diff) = (10, 2.345011217019044e-11)
-(it, diff) = (11, 2.345011217019044e-11)
-(it, diff) = (11, 6.970195950019926e-11)
-(it, diff) = (12, 6.970195950019926e-11)
-(it, diff) = (12, 2.6525775186028052e-11)
-(it, diff) = (13, 2.6525775186028052e-11)
-(it, diff) = (13, 6.214823273149321e-11)
-(it, diff) = (14, 6.214823273149321e-11)
-(it, diff) = (14, 4.443701431678848e-11)
-(it, diff) = (15, 4.443701431678848e-11)
-(it, diff) = (15, 2.189324992873356e-11)
-(it, diff) = (16, 2.189324992873356e-11)
-(it, diff) = (16, 2.214919509521202e-10)
-(it, diff) = (17, 2.214919509521202e-10)
-(it, diff) = (17, 1.2666127755275676e-10)
-(it, diff) = (18, 1.2666127755275676e-10)
-(it, diff) = (18, 2.3542591761370013e-11)
-(it, diff) = (19, 2.3542591761370013e-11)
-(it, diff) = (19, 2.5699450216880215e-11)
-(it, diff) = (20, 2.5699450216880215e-11)
-(it, diff) = (3, 2.47968638202174e-8)
-(it, diff) = (4, 2.1200889888204464e-9)
-(it, diff) = (5, 1.6607009483657988e-9)
-(it, diff) = (6, 1.3066860189979758e-9)
-(it, diff) = (7, 6.35994118786186e-11)
-(it, diff) = (8, 4.856903214541799e-10)
-(it, diff) = (9, 2.6334591658284756e-9)
-(it, diff) = (10, 4.414268787384056e-10)
-(it, diff) = (11, 9.273113208079956e-10)
-(it, diff) = (12, 1.886220540242557e-9)
-(it, diff) = (13, 7.375390786559221e-10)
-(it, diff) = (14, 6.509503730871458e-10)
-(it, diff) = (15, 4.5353488384310006e-10)
-(it, diff) = (16, 5.592161521876961e-10)
-(it, diff) = (17, 1.135608583644843e-9)
-(it, diff) = (18, 1.910109016270361e-9)
-(it, diff) = (19, 2.939341250346798e-10)
-(it, diff) = (20, 8.635185173970498e-10)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 14[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 14[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 6.46440437223122e-10[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 14[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 14[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 42[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 42[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 3.3719227213610283e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 42[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 42[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 42[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0017070267924192174[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 0.00025995916226408523[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 6.697719023484441e-9[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 4.04615849174363e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 42[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 84[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 84[39m
+(it, diff) = (1, 0.0030876360046847625)
+(it, diff) = (2, 1.7266848571305752e-5)
+(it, diff) = (3, 7.295011331136129e-8)
+(it, diff) = (4, 1.7801414999409282e-11)
+(it, diff) = (5, 2.581726313873517e-12)
+(it, diff) = (6, 6.777913838009347e-12)
+(it, diff) = (7, 2.0393859749162402e-12)
+(it, diff) = (8, 1.1683174475979438e-11)
+(it, diff) = (9, 3.5964489243258494e-11)
+(it, diff) = (10, 4.171677171975169e-12)
+(it, diff) = (11, 2.0759344297582116e-11)
+(it, diff) = (12, 8.512143414974571e-12)
+(it, diff) = (13, 1.0098372689458352e-11)
+(it, diff) = (14, 3.1096088299166585e-11)
+(it, diff) = (15, 1.5213401455072403e-11)
+(it, diff) = (16, 2.189938700042991e-12)
+(it, diff) = (17, 6.020165347509202e-12)
+(it, diff) = (18, 5.272227003142352e-12)
+(it, diff) = (19, 2.8978240365333883e-12)
+(it, diff) = (20, 1.4889433552588986e-11)
+┌ Warning: [31mIteration not accurate: diff = 1.4889433552588986e-11[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/mpo_truncation.jl:193
+(it, diff) = (3, 2.514691354612991e-8)
+(it, diff) = (4, 2.3659240723529105e-8)
+(it, diff) = (5, 2.172164871871391e-9)
+(it, diff) = (6, 2.3357904526097122e-8)
+(it, diff) = (7, 2.836552310289097e-8)
+(it, diff) = (8, 2.9866324450186725e-9)
+(it, diff) = (9, 5.686555790135898e-9)
+(it, diff) = (10, 1.1867085654024855e-8)
+(it, diff) = (11, 5.40866260149722e-9)
+(it, diff) = (12, 1.495223721024501e-8)
+(it, diff) = (13, 1.6878139555730904e-8)
+(it, diff) = (14, 2.1486223289207885e-8)
+(it, diff) = (15, 1.0837766877998227e-9)
+(it, diff) = (16, 2.920391684465388e-8)
+(it, diff) = (17, 3.569258966182341e-10)
+(it, diff) = (18, 4.04981700242322e-8)
+(it, diff) = (19, 4.392107277407216e-8)
+(it, diff) = (20, 1.3952672323794976e-8)
+┌ Warning: [31mIteration not accurate: diff = 1.3952672323794976e-8[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/mpo_truncation.jl:229
+[ Info: [35mAfter truncation: Bonddimension of ρ = 38[39m
 (i, β) = (4, 0.2)
-(it, diff) = (3, 9.299533031916431e-15)
-(it, diff) = (4, 9.299533031916431e-15)
-(it, diff) = (3, 1.977838033161594e-7)
-(it, diff) = (4, 9.245692391728305e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 38[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 38[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 3.4569717214990654e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 38[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 38[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 114[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 114[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 3.4466374743602693e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 114[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 114[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 114[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0012735834151609109[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 0.00012002157611975301[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 8.421726778046135e-9[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 1.3155076068504243e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 114[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 228[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 228[39m
+(it, diff) = (1, 0.006704809082816237)
+(it, diff) = (2, 1.0407220689855261e-8)
+(it, diff) = (3, 5.480979049492919e-11)
+(it, diff) = (4, 1.120601764355532e-15)
+(it, diff) = (3, 2.0126235780737038e-7)
+(it, diff) = (4, 7.990374464786697e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (5, 0.25)
-(it, diff) = (1, 3.096649245359248e-7)
-(it, diff) = (2, 3.096649245359248e-7)
-(it, diff) = (2, 1.0035731776827214e-10)
-(it, diff) = (3, 1.0035731776827214e-10)
-(it, diff) = (3, 1.0284703997771506e-15)
-(it, diff) = (4, 1.0284703997771506e-15)
-(it, diff) = (3, 9.280205856519712e-7)
-(it, diff) = (4, 1.0112210502361752e-14)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.3632932649213424e-8[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 3.524023841314252e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 120[39m
+(it, diff) = (1, 0.006722214810416957)
+(it, diff) = (2, 1.466404286374726e-6)
+(it, diff) = (3, 3.6740998096224467e-10)
+(it, diff) = (4, 3.779651139418416e-12)
+(it, diff) = (5, 1.1723524759649111e-15)
+(it, diff) = (3, 9.412324291579543e-7)
+(it, diff) = (4, 4.20949629512698e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (6, 0.3)
-(it, diff) = (1, 1.8011705390473373e-6)
-(it, diff) = (2, 1.8011705390473373e-6)
-(it, diff) = (2, 6.765415101935148e-10)
-(it, diff) = (3, 6.765415101935148e-10)
-(it, diff) = (3, 1.1916857745614393e-15)
-(it, diff) = (4, 1.1916857745614393e-15)
-(it, diff) = (3, 3.1929076011334347e-6)
-(it, diff) = (4, 5.864201324872639e-14)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 1.0481058281333873e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 4.0620119668077867e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 120[39m
+(it, diff) = (1, 0.007009103389204756)
+(it, diff) = (2, 1.7045912285481289e-6)
+(it, diff) = (3, 9.336108803325372e-10)
+(it, diff) = (4, 4.409082767304117e-12)
+(it, diff) = (5, 1.2773415205807697e-15)
+(it, diff) = (3, 3.226435198241103e-6)
+(it, diff) = (4, 4.1791297138075e-14)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (7, 0.35)
-(it, diff) = (1, 1.493216333475615e-6)
-(it, diff) = (2, 1.493216333475615e-6)
-(it, diff) = (2, 1.2881760344985511e-9)
-(it, diff) = (3, 1.2881760344985511e-9)
-(it, diff) = (3, 4.616075016539182e-12)
-(it, diff) = (4, 4.616075016539182e-12)
-(it, diff) = (4, 9.957176506917641e-16)
-(it, diff) = (5, 9.957176506917641e-16)
-(it, diff) = (3, 8.612380123121795e-6)
-(it, diff) = (4, 2.300443241966653e-13)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 3.7025467188044583e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 5.774240763821195e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 120[39m
+(it, diff) = (1, 0.007087963857231007)
+(it, diff) = (2, 1.464245135816308e-6)
+(it, diff) = (3, 1.0502794880961173e-9)
+(it, diff) = (4, 2.123350433618483e-15)
+(it, diff) = (3, 8.687340845411674e-6)
+(it, diff) = (4, 1.9851451934784881e-13)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (8, 0.4)
-(it, diff) = (2, 1.085223133293645e-9)
-(it, diff) = (3, 1.085223133293645e-9)
-(it, diff) = (3, 6.0689009657139e-12)
-(it, diff) = (4, 6.0689009657139e-12)
-(it, diff) = (4, 2.7192124204874015e-15)
-(it, diff) = (5, 2.7192124204874015e-15)
-(it, diff) = (3, 1.9405013712731723e-5)
-(it, diff) = (4, 6.991768759499569e-13)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 1.0112527628252745e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 1.2665085876778777e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0009848719479409263[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 9.954420684933412e-6[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 1.0374502710784944e-9[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.5329321408304818e-12[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.00926624073754508)
+(it, diff) = (2, 1.968293242909033e-6)
+(it, diff) = (3, 1.3125622643422095e-13)
+(it, diff) = (3, 1.952007200331363e-5)
+(it, diff) = (4, 8.883426432418363e-13)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (9, 0.45)
-(it, diff) = (1, 6.932377517149425e-7)
-(it, diff) = (2, 6.932377517149425e-7)
-(it, diff) = (2, 1.3200362660952342e-9)
-(it, diff) = (3, 1.3200362660952342e-9)
-(it, diff) = (3, 8.214897462341906e-12)
-(it, diff) = (4, 8.214897462341906e-12)
-(it, diff) = (4, 1.4724436202812063e-15)
-(it, diff) = (5, 1.4724436202812063e-15)
-(it, diff) = (4, 2.2068137099749394e-6)
-(it, diff) = (5, 3.4146065123116354e-14)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 9.667761834735074e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 6.342939606218931e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 120[39m
+(it, diff) = (1, 0.006904348146629923)
+(it, diff) = (2, 1.2430499088169916e-6)
+(it, diff) = (3, 8.468832280109574e-10)
+(it, diff) = (4, 3.077677496976403e-12)
+(it, diff) = (5, 2.7631662853721587e-15)
+(it, diff) = (3, 3.794729144375418e-5)
+(it, diff) = (4, 2.6709005238776817e-12)
+(it, diff) = (5, 2.5758165093934566e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (10, 0.5)
-(it, diff) = (1, 3.8880955630704307e-7)
-(it, diff) = (2, 3.8880955630704307e-7)
-(it, diff) = (2, 1.9662283117770175e-14)
-(it, diff) = (3, 1.9662283117770175e-14)
-(it, diff) = (3, 6.733460493250366e-5)
-(it, diff) = (4, 9.39134385553589e-12)
-(it, diff) = (5, 5.5509598693811116e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 2.1507121175491537e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 2.4472931920283817e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0020088151081974846[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 5.4286825374191636e-5[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 1.666994624190352e-8[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 3.75551655538294e-12[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.349279632610425e-13[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.010912919604212633)
+(it, diff) = (2, 3.0636060075096285e-7)
+(it, diff) = (3, 1.6478309496667532e-15)
+(it, diff) = (4, 4.8829630920150484e-6)
+(it, diff) = (5, 4.830610455673024e-14)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (11, 0.55)
-(it, diff) = (1, 6.566457195816836e-7)
-(it, diff) = (2, 6.566457195816836e-7)
-(it, diff) = (2, 1.4884351812923504e-13)
-(it, diff) = (3, 1.4884351812923504e-13)
-(it, diff) = (3, 0.00010952640481209604)
-(it, diff) = (5, 2.1216257982044123e-12)
-(it, diff) = (6, 5.3005345312487e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 3.692829229659608e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 8.354989820887002e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 120[39m
+(it, diff) = (1, 0.006638619567256087)
+(it, diff) = (2, 1.2163513044052168e-6)
+(it, diff) = (3, 2.0706408973530697e-9)
+(it, diff) = (4, 5.830141935730922e-12)
+(it, diff) = (5, 1.3427244503432023e-15)
+(it, diff) = (3, 0.00010963888839014305)
+(it, diff) = (4, 6.557742604736701e-11)
+(it, diff) = (5, 6.733955030940906e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (12, 0.6)
-(it, diff) = (1, 7.802275717322822e-7)
-(it, diff) = (2, 7.802275717322822e-7)
-(it, diff) = (2, 2.3322608207142393e-9)
-(it, diff) = (3, 2.3322608207142393e-9)
-(it, diff) = (3, 1.8981483617606932e-11)
-(it, diff) = (4, 1.8981483617606932e-11)
-(it, diff) = (4, 1.1248167290668393e-15)
-(it, diff) = (5, 1.1248167290668393e-15)
-(it, diff) = (3, 0.00016601168860426335)
-(it, diff) = (4, 1.0098486657516733e-10)
-(it, diff) = (5, 2.348408489292817e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 2.324824986343785e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 3.158977415137956e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0015741747216036206[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 0.00013310482649317275[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 7.00169190403039e-8[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 4.5534186155236846e-11[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 4.529697743915268e-12[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.01419228978066344)
+(it, diff) = (2, 6.162941259694567e-7)
+(it, diff) = (3, 9.449678154711924e-15)
+(it, diff) = (3, 0.0001669889988140158)
+(it, diff) = (4, 7.448284711810244e-11)
+(it, diff) = (5, 7.92715407470823e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (13, 0.65)
-(it, diff) = (1, 8.2888078916836e-7)
-(it, diff) = (2, 8.2888078916836e-7)
-(it, diff) = (2, 6.014019191795652e-14)
-(it, diff) = (3, 6.014019191795652e-14)
-(it, diff) = (3, 0.0002398493486869371)
-(it, diff) = (4, 1.8537646414292568e-10)
-(it, diff) = (5, 6.902905711955467e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 5.005418615756515e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 2.0622151125588902e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0011785285281440529[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 0.0002546049836732232[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 2.1287515586232656e-7[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 1.4123447216919357e-10[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.483370254901982e-12[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.016592878546189318)
+(it, diff) = (2, 1.0799703840245737e-6)
+(it, diff) = (3, 3.905226932435603e-13)
+(it, diff) = (4, 2.850350015344032e-5)
+(it, diff) = (5, 1.0913790624581074e-12)
+(it, diff) = (6, 1.0615237095179052e-14)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (14, 0.7)
-(it, diff) = (1, 1.227389561772794e-6)
-(it, diff) = (2, 1.227389561772794e-6)
-(it, diff) = (2, 3.956580387346708e-13)
-(it, diff) = (3, 3.956580387346708e-13)
-(it, diff) = (3, 0.0003283980276222034)
-(it, diff) = (4, 3.050870999575258e-10)
-(it, diff) = (5, 1.0457763664151007e-14)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 1.731355830724484e-7[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 1.2545989809047696e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0009590777563353032[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 0.0003809181991574227[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 5.410470212003127e-7[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 8.981054220333218e-10[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 9.130412877491077e-12[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.01831304381820547)
+(it, diff) = (2, 1.6934903143898094e-6)
+(it, diff) = (3, 2.1705713797931608e-12)
+(it, diff) = (4, 1.9848097689939283e-15)
+(it, diff) = (4, 4.42134182768154e-5)
+(it, diff) = (5, 8.73281486108331e-12)
+(it, diff) = (6, 7.502474264575225e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (15, 0.75)
-(it, diff) = (1, 3.875317155289305e-6)
-(it, diff) = (2, 3.875317155289305e-6)
-(it, diff) = (2, 1.1577343081001082e-12)
-(it, diff) = (3, 1.1577343081001082e-12)
-(it, diff) = (3, 1.8797444762622224e-15)
-(it, diff) = (4, 1.8797444762622224e-15)
-(it, diff) = (3, 0.00043408770777013)
-(it, diff) = (4, 1.7617598404966006e-9)
-(it, diff) = (5, 6.345448594004335e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 1.4269209023032508e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 5.532894084197026e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0010962475343218522[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 3.133257266003907e-5[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 3.941177957570481e-8[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 4.85707338744573e-11[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.205061870990545e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.020318497584173412)
+(it, diff) = (2, 7.93245063496108e-6)
+(it, diff) = (3, 2.776092553195263e-11)
+(it, diff) = (4, 2.586819246464227e-15)
+(it, diff) = (3, 0.00043406570307099115)
+(it, diff) = (4, 1.4527525238800845e-9)
+(it, diff) = (5, 1.062744248462975e-14)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (16, 0.8)
-(it, diff) = (1, 2.363237786792777e-5)
-(it, diff) = (2, 2.363237786792777e-5)
-(it, diff) = (2, 3.174468822948896e-10)
-(it, diff) = (3, 3.174468822948896e-10)
-(it, diff) = (3, 1.9657855349217505e-15)
-(it, diff) = (4, 1.9657855349217505e-15)
-(it, diff) = (3, 0.0005544924696966875)
-(it, diff) = (4, 1.2903994177082447e-9)
-(it, diff) = (5, 6.962626444835077e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 4.0415487622434705e-8[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 1.7757508371245309e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0005690357239339168[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 1.3267694800812614e-5[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 1.7979607187681097e-8[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 2.66365929387192e-11[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 9.030841813910578e-12[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.02242516101639168)
+(it, diff) = (2, 2.6278245011096792e-6)
+(it, diff) = (3, 2.8998769764103997e-13)
+(it, diff) = (4, 9.265085666939746e-5)
+(it, diff) = (5, 5.6073723685854514e-11)
+(it, diff) = (6, 6.543668440607439e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (17, 0.85)
-(it, diff) = (1, 5.897133954974825e-6)
-(it, diff) = (2, 5.897133954974825e-6)
-(it, diff) = (2, 7.621962425040695e-12)
-(it, diff) = (3, 7.621962425040695e-12)
-(it, diff) = (3, 1.949324285636234e-15)
-(it, diff) = (4, 1.949324285636234e-15)
-(it, diff) = (4, 0.00012587114057333303)
-(it, diff) = (5, 9.96519112438993e-11)
-(it, diff) = (6, 9.728630811722215e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.3202003023037654e-8[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 1.8494793180103793e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0007764474523990102[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 0.0001224273958944554[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 2.128549024722479e-7[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 3.0772718215911054e-10[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 8.819296284136363e-12[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.022052077140619852)
+(it, diff) = (2, 6.721763358328042e-6)
+(it, diff) = (3, 1.4959633995294872e-11)
+(it, diff) = (4, 1.932717483159961e-15)
+(it, diff) = (3, 0.0006919830891319999)
+(it, diff) = (4, 3.6869621272015694e-9)
+(it, diff) = (5, 5.9031308711510735e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (18, 0.9)
-(it, diff) = (1, 7.5254848935354954e-6)
-(it, diff) = (2, 7.5254848935354954e-6)
-(it, diff) = (2, 4.404485472348864e-11)
-(it, diff) = (3, 4.404485472348864e-11)
-(it, diff) = (3, 2.1269670421507587e-15)
-(it, diff) = (4, 2.1269670421507587e-15)
-(it, diff) = (3, 0.0008405912944341612)
-(it, diff) = (4, 4.743922464520826e-9)
-(it, diff) = (5, 1.0468205206302664e-14)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.3175668886531128e-8[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 1.8934856787759244e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0011780328609214872[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 1.002234808239389e-5[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 1.4694916751978103e-8[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 2.1738992820052678e-11[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 1.2797026893287838e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.023076388877561207)
+(it, diff) = (2, 7.139661873113728e-6)
+(it, diff) = (3, 5.5455599118778455e-12)
+(it, diff) = (4, 2.116247232235682e-15)
+(it, diff) = (4, 0.00016577675052162742)
+(it, diff) = (5, 2.1004730388245793e-10)
+(it, diff) = (6, 6.416536312330275e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (19, 0.95)
-(it, diff) = (1, 3.454317390336159e-5)
-(it, diff) = (2, 3.454317390336159e-5)
-(it, diff) = (2, 5.194284429580925e-10)
-(it, diff) = (3, 5.194284429580925e-10)
-(it, diff) = (3, 2.6635493446582045e-15)
-(it, diff) = (4, 2.6635493446582045e-15)
-(it, diff) = (4, 0.00021190222232078389)
-(it, diff) = (5, 4.979444594705201e-10)
-(it, diff) = (6, 9.096694926159072e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 8.067108072375428e-9[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 2.468348285166129e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0023717805678370846[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 1.0092563300646509e-5[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 1.378458604195711e-8[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 2.857705208945685e-11[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 1.780513141918915e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.02353568466677944)
+(it, diff) = (2, 8.226561303284362e-6)
+(it, diff) = (3, 2.6445950392531885e-11)
+(it, diff) = (4, 2.2132646956944626e-15)
+(it, diff) = (4, 0.00021234482086922228)
+(it, diff) = (5, 3.746798047964333e-10)
+(it, diff) = (6, 5.776618734710909e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 (i, β) = (20, 1.0)
-(it, diff) = (1, 1.0133887256405773e-5)
-(it, diff) = (2, 1.0133887256405773e-5)
-(it, diff) = (2, 4.553651494669982e-11)
-(it, diff) = (3, 4.553651494669982e-11)
-(it, diff) = (3, 3.1908780081562256e-15)
-(it, diff) = (4, 3.1908780081562256e-15)
-(it, diff) = (3, 0.0011698820992150042)
-(it, diff) = (4, 1.6248911331854433e-8)
-(it, diff) = (5, 7.84977757001189e-15)
+[ Info: [35mBefore normalization: Bonddimension of ρ = 40[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 40[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.5814950813351467e-8[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 40[39m
+[ Info: [33mFix Phase[39m
+[ Info: Iteration 1)
+[ Info: [35mEvolve[39m
+[ Info: [35mBefore normalization: Bonddimension of ρ = 120[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 1[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.0[39m
+[ Info: [33mAccuracy check[39m
+┌ Warning: [31mInverse not accurate: ϵ_acc = 2.3846271693221857e-6[39m
+└ @ DisorderKit ~/JuliaProjects/DisorderKit_clean/src/DisorderMPO.jl:272
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mUsing Z⁻¹ bonddimension of χ = 2[39m
+[ Info: [33mNormalizing Each Disorder sector[39m
+[ Info: [33mTruncate Partition Function[39m
+[ Info: [33mBefore truncation: Bonddimension of Z = 120[39m
+[ Info: [33mAfter truncation: Bonddimension of Z = 2[39m
+[ Info: [36mInvert Partition Function[39m
+[ Info: [36mstep 0) Generating initial guess[39m
+[ Info: [36mstep 1) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 1) Computing E-environments for site 1[39m
+[ Info: [36mstep 1) Solving linear systems for site 1[39m
+[ Info: [36mstep 1) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 1) Convergence error = 0.001245444609555467[39m
+[ Info: [36mstep 2) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 2) Computing E-environments for site 1[39m
+[ Info: [36mstep 2) Solving linear systems for site 1[39m
+[ Info: [36mstep 2) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 2) Convergence error = 2.626252622658765e-5[39m
+[ Info: [36mstep 3) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 3) Computing E-environments for site 1[39m
+[ Info: [36mstep 3) Solving linear systems for site 1[39m
+[ Info: [36mstep 3) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 3) Convergence error = 4.0619523441891185e-8[39m
+[ Info: [36mstep 4) Computing ρ-environments for site 1[39m
+[ Info: [36mstep 4) Computing E-environments for site 1[39m
+[ Info: [36mstep 4) Solving linear systems for site 1[39m
+[ Info: [36mstep 4) Updating AL and AR tensors for site 1[39m
+[ Info: [36mstep 4) Convergence error = 9.964991026363007e-11[39m
+[ Info: [33mAccuracy check[39m
+[ Info: [32maccuracy for MPO inversion: ϵ_acc = 2.943598668059909e-11[39m
+[ Info: [33mMultiply Partition Function with Density Matrix[39m
+[ Info: [33mBefore multiplication: Bonddimension of ρ = 120[39m
+[ Info: [33mAfter multiplication: Bonddimension of ρ = 240[39m
+[ Info: [33mFix Phase[39m
+[ Info: [35mTruncating ρ[39m
+[ Info: [35mBefore truncation: Bonddimension of ρ = 240[39m
+(it, diff) = (1, 0.024234113136899126)
+(it, diff) = (2, 6.916924599649827e-6)
+(it, diff) = (3, 1.3363483014465709e-11)
+(it, diff) = (4, 2.1870178651871495e-15)
+(it, diff) = (3, 0.0011723977445561703)
+(it, diff) = (4, 1.825935163464132e-8)
+(it, diff) = (5, 9.345391170015445e-15)
+[ Info: [35mAfter truncation: Bonddimension of ρ = 40[39m
 ────────────────────────────────────────────────────────
 Section                          ncalls     time    %tot
 ────────────────────────────────────────────────────────
-normalize_each_disorder_sector       53    54.0s   14.6%
-truncate_disorder_MPO step 20         1    34.1s    9.2%
-truncate_disorder_MPO step 19         1    30.1s    8.1%
-truncate_disorder_MPO step 18         1    28.6s    7.7%
-truncate_disorder_MPO step 17         1    28.4s    7.7%
-truncate_disorder_MPO step 16         1    27.3s    7.4%
-truncate_disorder_MPO step 15         1    26.4s    7.1%
-truncate_disorder_MPO step 14         1    22.6s    6.1%
-truncate_disorder_MPO step 13         1    21.2s    5.7%
-truncate_disorder_MPO step 11         1    20.5s    5.5%
-truncate_disorder_MPO step 10         1    19.8s    5.4%
-truncate_disorder_MPO step 8          1    18.0s    4.9%
-truncate_disorder_MPO step 4          1    9.84s    2.7%
-truncate_disorder_MPO step 3          1    5.52s    1.5%
-truncate_disorder_MPO step 1          1    4.31s    1.2%
-truncate_disorder_MPO step 12         1    4.20s    1.1%
-evolve_one_time_step                 20    3.68s    1.0%
-truncate_disorder_MPO step 9          1    3.29s    0.9%
-truncate_disorder_MPO step 7          1    3.13s    0.8%
-truncate_disorder_MPO step 5          1    2.72s    0.7%
-truncate_disorder_MPO step 6          1    2.54s    0.7%
-truncate_disorder_MPO step 2          1    200ms    0.1%
+normalize_each_disorder_sector       53    53.6s   14.7%
+truncate_disorder_MPO step 20         1    29.1s    8.0%
+truncate_disorder_MPO step 18         1    29.0s    7.9%
+truncate_disorder_MPO step 19         1    28.7s    7.9%
+truncate_disorder_MPO step 17         1    27.5s    7.5%
+truncate_disorder_MPO step 15         1    26.6s    7.3%
+truncate_disorder_MPO step 14         1    26.3s    7.2%
+truncate_disorder_MPO step 16         1    23.6s    6.5%
+truncate_disorder_MPO step 13         1    21.9s    6.0%
+truncate_disorder_MPO step 12         1    20.6s    5.7%
+truncate_disorder_MPO step 10         1    18.5s    5.1%
+truncate_disorder_MPO step 8          1    17.1s    4.7%
+truncate_disorder_MPO step 4          1    12.2s    3.3%
+truncate_disorder_MPO step 3          1    5.77s    1.6%
+truncate_disorder_MPO step 1          1    4.44s    1.2%
+truncate_disorder_MPO step 11         1    4.08s    1.1%
+evolve_one_time_step                 20    3.70s    1.0%
+truncate_disorder_MPO step 9          1    3.53s    1.0%
+truncate_disorder_MPO step 6          1    2.90s    0.8%
+truncate_disorder_MPO step 5          1    2.87s    0.8%
+truncate_disorder_MPO step 7          1    2.77s    0.8%
+truncate_disorder_MPO step 2          1    198ms    0.1%
 ────────────────────────────────────────────────────────

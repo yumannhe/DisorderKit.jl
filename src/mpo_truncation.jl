@@ -169,6 +169,7 @@ function iterate_lc(L, A; conv_tol=1e-12, max_iter=200, trunc=truncbelow(1e-10))
         dimL, dim_U = space(L,1), space(U,1)
         it +=1
     end
+    @show it,diff
     while (diff > conv_tol) && (it < max_iter)
         # @show space(L), space(A), space(U)
         transferl = fixed_point_left(A, U)
@@ -177,7 +178,7 @@ function iterate_lc(L, A; conv_tol=1e-12, max_iter=200, trunc=truncbelow(1e-10))
         _, L = leftorth!(L[1])
         L = L/norm(L)
         U, L, diff, S = leftorth_trunc(L,A;trunc)
-        @show it,diff
+        
         # check if the space match
         dimL, dim_U = space(L,1), space(U,1)
         it +=1
